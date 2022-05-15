@@ -1,0 +1,4 @@
+push报错：RPC Failed;Http401 curl 22
+运行git命令：git config --global credential.helper store
+重新push
+根据提示重新输入github用户名密码

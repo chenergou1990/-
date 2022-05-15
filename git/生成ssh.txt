@@ -1,0 +1,79 @@
+生成ssh:
+ssh-keygen -t ed25519 -C "邮箱" 
+git status
+git diff
+查看log:
+git reflog {filename}查看所有的log，包括当前时间之后的
+git log --pretty=oneline
+git log --oneline
+
+回退版本
+git reset --hard head^^
+git reset --hard {version}
+1.还未提交到暂存区
+git checkout -- filename
+2.提交到暂存区
+git reset head {filename}将文件移出暂存区回到工作区
+3 提交到版本库，回退到上个版本即可
+
+
+
+
+git tag -a v1.04 99ab5ed05c88a523c30d910896 -m 'remark'
+git tag  v1.04 99ab5ed05c88a523c30d910896 
+git log --oneline --decorate --graph
+git push origin --tags 将标签推到远程库
+git pull 将标签拉下来
+git tag -d {tag} 将tag删除
+
+
+stash:
+git stash
+git stash list
+git stash apply {0}
+
+
+echo "# idea-demo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:chenergou1990/idea-demo.git
+git push -u origin master
+
+
+
+
+
+git clone 
+
+创建并提交分支：
+git branch steven
+git push origin steven
+
+拉取分支代码
+
+方法一： 
+
+1、首先与远程仓库建立连接：git remote add origin url地址
+
+2、使用git branch   查看本地是否具有dev分支
+
+3、没有dev分支  则 git fetch origin dev
+
+4、git checkout -b dev origin/dev   在本地创建分支dev并切换到该分支
+
+5、git pull origin dev             gitLab上dev分支上的内容都拉取到本地了
+ 
+
+方法二：
+
+1、git init 
+
+2、git clone
+
+3、git checkout -b 分支名 origin/分支名
+
+
+git远程库怎么回退版本
+git reset
